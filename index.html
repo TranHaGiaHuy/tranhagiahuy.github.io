@@ -350,9 +350,9 @@
         <div class="videos">
             <div class="main-content">
                 <h2 class="heading2">Our Popular Crisps</h2>
-                <div class="list">
+                <div class="list owl-carousel owl-theme" id="videos">
                     <!-- Item1 -->
-                    <div class="item">
+                    <div class="item1 item">
                         <div class="media">
                             <div class="background-circle-570">
                                 <div class="circle-inner position-center"></div>
@@ -362,14 +362,14 @@
                                 <div class="circle-inner position-center"></div>
                                 <div class="circle-inner position-center"></div>
                             </div>
-                            <img src="./assets/imgs/LaysWawyOndulees.png" class="lays" alt="">
+                            <div class="picture"><img src="./assets/imgs/LaysWawyOndulees.png" class="lays" alt=""></div>
                         </div>
                         <div class="text">
                             <h3 class="heading3">LAY’S® Wavy Ondulees Salt & Vinegar</h3>
                             <div class="cta-group">
                                 <a href="#!" class="btn">
                                     <div class="btn-play">
-                                        <img src="./assets/imgs/icons/Play.svg" alt="">
+                                        <span> <img src="./assets/imgs/icons/Play.svg" alt=""></span>
                                     </div>
                                     <span class="desc">Play Video</span>
                                 </a>
@@ -377,7 +377,7 @@
                         </div>
                     </div>
                     <!-- Item2 -->
-                    <div class="item">
+                    <div class="item2 item">
                         <div class="media">
                             <div class="background-circle-570">
                                 <div class="circle-inner position-center"></div>
@@ -387,14 +387,14 @@
                                 <div class="circle-inner position-center"></div>
                                 <div class="circle-inner position-center"></div>
                             </div>
-                            <img src="./assets/imgs/LaysBeer.png" class="lays" alt="">
+                            <div class="picture"><img src="./assets/imgs/LaysBeer.png" class="lays" alt=""></div>
                         </div>
                         <div class="text">
                             <h3 class="heading3">LAY’S® Beers and Cigar</h3>
                             <div class="cta-group">
                                 <a href="#!" class="btn">
                                     <div class="btn-play">
-                                        <img src="./assets/imgs/icons/Play.svg" alt="Play">
+                                        <span><img src="./assets/imgs/icons/Play.svg" alt="Play"></span>
                                     </div>
                                     <span class="desc">Play Video</span>
                                 </a>
@@ -405,7 +405,7 @@
             </div>
         </div>
         <div class="comments">
-            <div class="main-content owl-carousel owl-theme">
+            <div class="main-content owl-carousel owl-theme" id="comments">
                 <!-- Comment1 -->
                 <div class="item">
                     <div class="body">
@@ -489,7 +489,7 @@
                     <div class="text">
                         <h2 class="heading2">Find a Crisps Store Near You</h2>
                         <p class="desc">Feel the best and awesome taste with Lays Crisps. There has been various kind of Crisps you can eat and feel.</p>
-                        <a href="#!" class="btn"><span>Find Store</span></a>
+                        <a href="#!" class="btn-findstore"><span>Find Store</span></a>
                     </div>
                 </div>
             </div>
@@ -562,13 +562,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(document).ready(function() {
-            $('.owl-carousel').owlCarousel({
+            $('#comments').owlCarousel({
                 loop: true,
                 margin: 10,
                 nav: true,
                 navText: ["<i class='fa fa-long-arrow-left'></i>", "<i class='fa fa-long-arrow-right'></i>"],
                 items: 1
 
+            })
+            $('#videos').owlCarousel({
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                        dots: true,
+                    },
+                }
             })
         });
         const navPC = document.getElementById("nav__list--pc");

@@ -94,6 +94,17 @@ a:hover {
   line-height: 1.75;
 }
 
+.owl-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
+.owl-stage {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-end;
+  gap: 30px;
+}
+
 /* ============================================================================================================== */
 
 /* =================================================Background==Circle============================================== */
@@ -828,12 +839,15 @@ main {
 .videos {
   margin-top: 150px;
   position: relative;
+  padding-bottom: 200px;
 }
 
 /* 000000000000000000000000000000 Heading */
 
 .videos h2 {
-  margin-left: 600px;
+  display: block;
+  width: 48.71%;
+  margin: 0 0 0 auto;
 }
 
 /* 000000000000000000000000000000 List */
@@ -854,46 +868,51 @@ main {
 
 /* Item1 */
 
-.videos .list .item:nth-of-type(1) {
-  .media {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 570px;
-    height: 484px;
-    border-radius: 16px;
-    background-color: #eafffc;
-  }
-  .media .background-circle-570 .circle-inner {
-    border: 18px solid #d3f5f0;
-  }
+.videos .list .item1 .media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 570px;
+  aspect-ratio: 1.178;
+  border-radius: 16px;
+  background-color: #eafffc;
 }
 
-.videos .list .item:nth-of-type(1) img.lays {
+.videos .list .item1 .media .background-circle-570 .circle-inner {
+  border: 18px solid #d3f5f0;
+}
+
+.videos .list .item1 .picture {
   position: absolute;
+  width: 56.86%;
   top: -80px;
 }
 
 /* Item2 */
 
-.videos .list .item:nth-of-type(2) {
-  .media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 570px;
-    height: 384px;
-    border-radius: 16px;
-    background-color: #ffeaec;
-  }
-  .media .background-circle-570 .circle-inner {
-    border: 18px solid #ffd8db;
-  }
+.videos .owl-item {
+  width: 50%;
+  margin-right: 0 !important;
 }
 
-.videos .list .item:nth-of-type(2) img.lays {
+.videos .list .item2 .media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 570px;
+  aspect-ratio: 1.48;
+  border-radius: 16px;
+  background-color: #ffeaec;
+}
+
+.videos .list .item2 .media .background-circle-570 .circle-inner {
+  border: 18px solid #ffd8db;
+}
+
+.videos .list .item2 .picture {
+  width: 51.22%;
   position: absolute;
   top: -70px;
 }
@@ -928,7 +947,6 @@ main {
 
 .comments {
   background-color: #80e2ff;
-  margin-top: 200px;
 }
 
 .comments .body {
@@ -1015,9 +1033,9 @@ main {
 
 .comments .media img.picture {
   position: absolute;
-  /* top: -80px; */
   bottom: 0;
   z-index: 2;
+  padding: 0 10px;
 }
 
 /* 000000000000000000000000000000 Carousel */
@@ -1075,15 +1093,15 @@ main {
   font-size: 1.8rem;
 }
 
-.cta .body .text .btn {
+.cta .body .text .btn-findstore {
   display: inline-block;
   border-radius: 8px;
-  background: #182327;
+  background-color: #182327;
   padding: 15px 38px;
   margin-top: 38px;
 }
 
-.cta .body .text .btn span {
+.cta .body .text .btn-findstore span {
   color: #fff;
   font-size: 1.8rem;
   font-weight: 600;
@@ -1098,7 +1116,7 @@ main {
   margin: 0 auto;
   width: 100%;
   object-fit: cover;
-  z-index: 0;
+  z-index: -1;
   user-select: none;
   opacity: 0.15;
 }

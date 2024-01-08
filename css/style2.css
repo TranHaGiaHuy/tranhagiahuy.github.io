@@ -950,7 +950,7 @@ main {
 }
 
 .comments .body {
-  margin: 182px 0 100px;
+  padding: 182px 0 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -959,7 +959,8 @@ main {
 /* 000000000000000000000000000000 Text */
 
 .comments .body .text {
-  width: 570px;
+  width: 100%;
+  max-width: 570px;
 }
 
 /* ----top----- */
@@ -971,13 +972,13 @@ main {
   font-style: italic;
   font-weight: 500;
   line-height: 1.63;
-  margin-top: 70px;
+  margin: 70px 0 48px;
 }
 
 .comments .body .text .top .line {
-  width: 570px;
+  width: 100%;
+  max-width: 570px;
   height: 2px;
-  margin-top: 48px;
   border-radius: 1px;
   background: #33d1ff;
 }
@@ -1032,6 +1033,9 @@ main {
 }
 
 .comments .media img.picture {
+  width: 93%;
+  height: 118%;
+  object-fit: contain;
   position: absolute;
   bottom: 0;
   z-index: 2;
@@ -1040,20 +1044,16 @@ main {
 
 /* 000000000000000000000000000000 Carousel */
 
-.comments .owl-nav .owl-prev {
+.comments .owl-nav {
   position: absolute;
-  left: 438px;
-  top: 575px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid #182327 !important;
+  display: inline-flex;
+  gap: 28px;
+  left: 36.5%;
+  bottom: 140px;
 }
 
+.comments .owl-nav .owl-prev,
 .comments .owl-nav .owl-next {
-  position: absolute;
-  left: 517px;
-  top: 575px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -1082,7 +1082,8 @@ main {
 /* 00000000000000000000000000 Text*/
 
 .cta .body .text {
-  width: 470px;
+  width: 100%;
+  max-width: 470px;
   margin: 0 auto;
   text-align: center;
 }
@@ -1099,6 +1100,8 @@ main {
   background-color: #182327;
   padding: 15px 38px;
   margin-top: 38px;
+  z-index: 1;
+  position: relative;
 }
 
 .cta .body .text .btn-findstore span {
@@ -1111,12 +1114,12 @@ main {
 .cta img {
   position: absolute;
   left: 0;
-  /* top: 0; */
   bottom: -25px;
   margin: 0 auto;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
   user-select: none;
   opacity: 0.15;
 }
